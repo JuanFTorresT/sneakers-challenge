@@ -22,9 +22,12 @@ export default function ProductImages() {
     }
     return(
         <>
-            <img src={(`src/assets/productImages/${selectedImage}`)} alt="Zapatos" />
-            <button onClick={previous}>{'<'}</button>
-            <button onClick={next}>{'>'}</button>
+            <div className="contenedor-slider relative inline-block">
+                <img className="" src={(`src/assets/productImages/${selectedImage}`)} alt="Zapatos" />
+                <button className="absolute left-2 inset-y-1/2 bg-white w-10 h-10 rounded-full		" onClick={previous}>{'<'}</button>
+                <button className="absolute right-2 inset-y-1/2 bg-white w-10 h-10 rounded-full	"onClick={next}>{'>'}</button>
+            </div>
+
         </>
     );
 }
