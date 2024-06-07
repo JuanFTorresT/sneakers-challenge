@@ -23,7 +23,7 @@ export default function ProductImages() {
     return(
         <>
             <div className="contenedor-slider relative inline-block">
-                <img className="" src={(`src/assets/productImages/${selectedImage}`)} alt="Zapatos" />
+                <img className="" src={(`/assets/productImages/${selectedImage}`)} alt="Zapatos" />
                 <button className="font-bold absolute left-2 inset-y-1/2 bg-white w-10 h-10 rounded-full" onClick={previous}>{'<'}</button>
                 <button className="font-bold absolute right-2 inset-y-1/2 bg-white w-10 h-10 rounded-full"onClick={next}>{'>'}</button>
             </div>
