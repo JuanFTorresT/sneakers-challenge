@@ -1,5 +1,6 @@
 import BuyButton from './BuyButton'
-import TrashIcon from './TrashIcon';
+import CartItem from './CartItem';
+
 export default function ModalCart() {
     return(
         <>
@@ -7,22 +8,13 @@ export default function ModalCart() {
                 
                 <p className='font-bold'>Cart</p>
                 <hr />
-                <ul>
-                    <li className="flex gap-4 items-center">
-                        <img className="w-14 rounded" src="/assets/productImages/image-product-1-thumbnail.jpg" alt="" />
-                        <div className="item-description">
-                            <p>Fall Limited Edition Sneakers</p>
-                            <div className="price flex gap-2">
-                                <p>$125</p>
-                                <p>x3</p>
-                                <p className='font-bold'>$375</p>
-                            </div>
-                            
-                        </div>
-                        <TrashIcon/>
-                    </li>
+                <ul className='flex flex-col gap-4'>
+                    <CartItem/>
+                    <CartItem/>
+                    <CartItem/>
+                    <CartItem/>
                 </ul>
-                <BuyButton/>
+                <BuyButton textButton={'Checkout'}/>
             </div>
         </>
     );

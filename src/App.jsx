@@ -14,7 +14,7 @@ export default function Home() {
       <ProductDescription/>
       <div className="buy-menu gap-4 flex flex-col p-4">
         <QuantitySelector/>
-        <BuyButton/>
+        <BuyButton textButton={'Add to cart'}/>
         
         
       </div>

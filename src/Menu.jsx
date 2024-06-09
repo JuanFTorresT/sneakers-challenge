@@ -9,9 +9,14 @@ import { useState } from 'react';
 
 export default function NavigationMenu() {
     const [isOpenMenu, setIsOpenMenu] = useState(false)
+    const [isOpenCart, setIsOpenCart] = useState(false)
 
     const handleClick = () => {
         setIsOpenMenu(!isOpenMenu);
+    }
+
+    const handleClickCart = () => {
+        setIsOpenCart(!isOpenCart);
     }
 
     
@@ -25,7 +30,7 @@ export default function NavigationMenu() {
         
         <div className="menu">
           <ul className='flex gap-4 flex-wrap items-center'>
-            <li><Carrito/></li>
+            <li><Carrito onClick={handleClickCart}/></li>
             <li><img className='w-7'src="\assets\productImages\image-avatar.png" alt="" /></li>
           </ul>
         </div>
@@ -36,8 +41,10 @@ export default function NavigationMenu() {
 
       </div>
       {isOpenMenu && <MenuModal isActive={isOpenMenu} onClose={handleClick}/>}
+
       <div className="flex justify-center">
-        <ModalCart/>
+        {isOpenCart && <ModalCart/> }
+        
       </div>
       
     </>
