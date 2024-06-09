@@ -2,6 +2,7 @@ import logo from '/assets/productImages/logo.svg'
 import Carrito from './CartIcon'
 import BurgerMenu from './BurgerMenu'
 import MenuModal from './MenuModal';
+import ModalCart from './ModalCart';
 import { useState } from 'react';
 
 
@@ -28,9 +29,17 @@ export default function NavigationMenu() {
             <li><img className='w-7'src="\assets\productImages\image-avatar.png" alt="" /></li>
           </ul>
         </div>
-        {isOpenMenu && <MenuModal isActive={isOpenMenu} onClose={handleClick}/>}
+        
+        
+
+        
 
       </div>
+      {isOpenMenu && <MenuModal isActive={isOpenMenu} onClose={handleClick}/>}
+      <div className="flex justify-center">
+        <ModalCart/>
+      </div>
+      
     </>
   );
 }
